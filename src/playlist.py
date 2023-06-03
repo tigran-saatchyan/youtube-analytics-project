@@ -1,7 +1,7 @@
 """ PlayList class module """
 import datetime
 
-import isodate
+import isodate  # pylint: disable=E0401
 from googleapiclient.discovery import build  # pylint: disable=E0401
 
 from src.constants import API_KEY
