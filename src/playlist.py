@@ -1,8 +1,12 @@
+""" PlayList class module """
 import datetime
+
 import isodate
-from googleapiclient.discovery import build
+from googleapiclient.discovery import build  # pylint: disable=E0401
+
 from src.constants import API_KEY
 from src.video import Video
+
 
 class PlayList:
     """
@@ -10,10 +14,12 @@ class PlayList:
 
     Attributes:
         playlist_id (str): The ID of the playlist.
-        __youtube (googleapiclient.discovery.Resource): The YouTube API resource object.
+        __youtube (googleapiclient.discovery.Resource): The YouTube
+        API resource object.
         _pl_title (str): The title of the playlist.
         _pl_url (str): The URL of the playlist.
-        _pl_video_durations (list): The durations of the videos in the playlist.
+        _pl_video_durations (list): The durations of the videos
+        in the playlist.
     """
 
     __youtube = build('youtube', 'v3', developerKey=API_KEY)
